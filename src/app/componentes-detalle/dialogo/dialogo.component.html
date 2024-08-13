@@ -1,0 +1,28 @@
+<div class="container-dialogo">
+	<h6 mat-dialog-title>¡VENTA FINALIZADA EXITOSAMENTE!</h6>
+	<div mat-dialog-content>
+	  <label>ID VENTA:&nbsp;&nbsp;</label>
+	  <mat-form-field>
+	    <input matInput type="number" class="example-right-align" placeholder="10056" />
+	  </mat-form-field>
+	</div>
+	<div mat-dialog-content>
+		<label>MONTO DE VENTA:&nbsp;&nbsp;</label>
+	 	<mat-form-field>
+		   <input matInput type="number" class="example-right-align" placeholder="100" />
+		   <span matTextPrefix>S/.&nbsp;</span>
+		   <span matTextSuffix>.00</span>
+	   	</mat-form-field>
+	</div>
+	<!--Falta agregar un input que muestre la fecha y la hora de la compra -->
+	
+	<div mat-dialog-content>
+	  <label>VENDEDOR:&nbsp;&nbsp;</label>
+	  <mat-form-field>
+	    <input matInput type="text" class="example-right-align" placeholder="Ejemplo Vendedor" />
+	  </mat-form-field>
+	</div>
+	<mat-dialog-actions align="end">
+	  <button mat-stroked-button [mat-dialog-close]="true" cdkFocusInitial>Aceptar</button>
+	</mat-dialog-actions>
+</div>

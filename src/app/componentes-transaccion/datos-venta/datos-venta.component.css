@@ -1,0 +1,7 @@
+.container-datos{
+	display: flex; gap: 10px;
+}
+.example-full-width {
+  width: 100%;
+  max-width:400px;
+}

@@ -1,0 +1,22 @@
+
+<div class="example-container">
+	
+  <div>
+  	<label>TOTAL VENTA:&nbsp;</label>
+  	<mat-form-field>
+    <input matInput type="number" class="example-right-align" placeholder="10" />
+    <span matTextPrefix>$&nbsp;</span>
+    <span matTextSuffix>.00</span>
+  </mat-form-field>
+  </div>
+  <div>
+  	<label>TOTAL VENTA (DCST.):&nbsp;</label>
+  	<mat-form-field>
+    <input matInput type="number" class="example-right-align" placeholder="0" />
+    <span matTextPrefix>$&nbsp;</span>
+    <span matTextSuffix>.00</span>
+  </mat-form-field>
+  </div>
+  <button mat-flat-button (click)="openDialog()">REGISTRAR</button>
+
+</div>

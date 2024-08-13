@@ -1,0 +1,26 @@
+.container {
+  margin: 0 20px; /* Mantén este estilo */
+}
+
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+
+.botones{
+	display: flex; gap: 16px;
+}
+.example-button-row {
+	
+  position: relative; height: 100px;
+}
+
+.example-button-row a{
+	position: absolute; 
+	bottom: 0; 
+	right: 0; 
+	margin: 20px;
+}

@@ -1,0 +1,25 @@
+<div class="container">
+	<h6>REGISTRO DE VENTA</h6>
+	<app-datos-venta></app-datos-venta>
+	
+	<mat-stepper [linear]="isLinear" #stepper>
+	  <mat-step [stepControl]="firstFormGroup" label="Escoger Curso">
+	    <app-curso></app-curso>
+	    <div>
+        <button mat-raised-button matStepperNext>SIGUIENTE</button>
+      </div>
+	  </mat-step>
+	  <mat-step [stepControl]="secondFormGroup" label="Escoger Paquete">
+	    <app-paquetes></app-paquetes>
+	    <div class="botones">
+	        <button mat-raised-button matStepperPrevious>VOLVER A CURSO</button>
+	        <button mat-flat-button matStepperPrevious>AGREGAR</button>
+      </div>
+	  </mat-step>
+	</mat-stepper>
+	
+	<app-productos-seleccionados></app-productos-seleccionados>
+	<div class="example-button-row">
+	    <a mat-flat-button routerLink="/detalle-venta">FINALIZAR</a>
+	</div>
+</div>

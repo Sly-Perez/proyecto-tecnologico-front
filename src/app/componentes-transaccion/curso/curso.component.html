@@ -1,0 +1,18 @@
+<div class="container-curso">
+	<h6>Seleccione un curso</h6>
+	<mat-form-field class="example-full-width">
+	    <mat-label>Buscar curso</mat-label>
+	    <input matInput type="text" [(ngModel)]="value" placeholder="Ingresar el nombre del curso">
+	    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+	      <mat-icon>close</mat-icon>
+	    </button>
+	</mat-form-field>
+	<mat-radio-group
+	  aria-labelledby="example-radio-group-label"
+	  class="example-radio-group"
+	  [(ngModel)]="favoriteCurso">
+	  @for (curso of curso; track curso) {
+	    <mat-radio-button class="example-radio-button" [value]="curso">{{curso}}</mat-radio-button>
+	  }
+	</mat-radio-group>
+</div>

@@ -8,18 +8,71 @@ import { HeaderComponent } from './header/header.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { FooterComponent } from './footer/footer.component';
+import { FormVentaComponent } from './form-venta/form-venta.component';
 
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDividerModule} from '@angular/material/divider';
+import { RegistrarComponent } from './venta/registrar/registrar.component';
+import { BuscarComponent } from './venta/buscar/buscar.component';
+import {MatListModule} from '@angular/material/list';
+import {MatRadioModule} from '@angular/material/radio';
+import { TransaccionComponent } from './transaccion/transaccion.component';
+import { DatosVentaComponent } from './componentes-transaccion/datos-venta/datos-venta.component';
+import { CursoComponent } from './componentes-transaccion/curso/curso.component';
+import { PaquetesComponent } from './componentes-transaccion/paquetes/paquetes.component';
+import { ProductosSeleccionadosComponent } from './componentes-transaccion/productos-seleccionados/productos-seleccionados.component';
+import {FormBuilder, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatStepperModule} from '@angular/material/stepper';
+import {SelectionModel} from '@angular/cdk/collections';
+import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { DetalleVentaComponent } from './detalle-venta/detalle-venta.component';
+import { CalculoVentaComponent } from './componentes-detalle/calculo-venta/calculo-venta.component';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { DialogoComponent } from './componentes-detalle/dialogo/dialogo.component';
+/*import { MatDatepickerInputEvent } from '@angular/material/datepicker';
+import { MatDatepickerModule } from '@angular/material/datepicker';  // Importar MatDatepickerModule
+import { MatNativeDateModule } from '@angular/material/core'; 
+*/
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent,
+    FormVentaComponent,
+    RegistrarComponent,
+    BuscarComponent,
+    TransaccionComponent,
+    DatosVentaComponent,
+    CursoComponent,
+    PaquetesComponent,
+    ProductosSeleccionadosComponent,
+    DetalleVentaComponent,
+    CalculoVentaComponent,
+    DialogoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+	FormsModule,
+	MatInputModule, 
+    MatFormFieldModule,
+	MatDividerModule,
+	MatListModule,
+	MatRadioModule,
+	ReactiveFormsModule,
+	MatStepperModule,
+	MatTableModule,
+	MatCheckboxModule,
+	MatDialogModule,
+	/*MatDatepickerModule,  // Añadir MatDatepickerModule
+    MatNativeDateModule*/
+	
   ],
   providers: [
     provideAnimationsAsync()
