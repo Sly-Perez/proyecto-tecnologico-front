@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './registrar.component.css'
 })
 export class RegistrarComponent {
-
+  value1 = '';
+  value2 = '';  
 }

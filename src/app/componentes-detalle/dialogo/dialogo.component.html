@@ -1,28 +1,32 @@
-<div class="container-dialogo">
-	<h6 mat-dialog-title>¡VENTA FINALIZADA EXITOSAMENTE!</h6>
+<div class="container-dialogo" style="background-color: #D9D9D9;">
+	<h6 mat-dialog-title class="titular">¡VENTA FINALIZADA EXITOSAMENTE!</h6>
 	<div mat-dialog-content>
 	  <label>ID VENTA:&nbsp;&nbsp;</label>
-	  <mat-form-field>
-	    <input matInput type="number" class="example-right-align" placeholder="10056" />
+	  <mat-form-field appearance="outline">
+	    <input matInput type="number" class="example-right-align" placeholder="10056" readonly="true"/>
 	  </mat-form-field>
 	</div>
 	<div mat-dialog-content>
 		<label>MONTO DE VENTA:&nbsp;&nbsp;</label>
-	 	<mat-form-field>
-		   <input matInput type="number" class="example-right-align" placeholder="100" />
+	 	<mat-form-field appearance="outline">
+		   <input matInput type="number" class="example-right-align" placeholder="46.75" readonly="true"/>
 		   <span matTextPrefix>S/.&nbsp;</span>
-		   <span matTextSuffix>.00</span>
 	   	</mat-form-field>
 	</div>
-	<!--Falta agregar un input que muestre la fecha y la hora de la compra -->
+	<div mat-dialog-content>
+		<label>FECHA VENTA:&nbsp;&nbsp;</label>
+		<mat-form-field appearance="outline">
+			<input matInput type="text" class="example-right-align" placeholder="14/08/2024, 19:20 hrs." />
+		</mat-form-field>
+	</div>
 	
 	<div mat-dialog-content>
 	  <label>VENDEDOR:&nbsp;&nbsp;</label>
-	  <mat-form-field>
-	    <input matInput type="text" class="example-right-align" placeholder="Ejemplo Vendedor" />
+	  <mat-form-field appearance="outline">
+	    <input matInput type="text" class="example-right-align" placeholder="Vendedor Comercial" />
 	  </mat-form-field>
 	</div>
-	<mat-dialog-actions align="end">
-	  <button mat-stroked-button [mat-dialog-close]="true" cdkFocusInitial>Aceptar</button>
+	<mat-dialog-actions style="display: flex; justify-content: center;">
+		<button style="background-color: #71A64B; color: #031C26; font-weight: bolder;" mat-stroked-button [mat-dialog-close]="true" cdkFocusInitial>ACEPTAR</button>
 	</mat-dialog-actions>
 </div>

@@ -1,6 +1,6 @@
-<div>
-	<h6>PRODUCTOS SELECCIONADOS</h6>
-	<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<div style="min-width: 500px; ">
+	<h6 class="titular">PRODUCTOS SELECCIONADOS</h6>
+	<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin-top: 0; background-color: transparent;">
 
 	  <!-- Checkbox Column -->
 	  <ng-container matColumnDef="select">
@@ -44,6 +44,6 @@
 	      (click)="selection.toggle(row)">
 	  </tr>
 	</table>
-	<button  mat-stroked-button >ELIMINAR PRODUCTO</button>
+	<button  mat-stroked-button style="margin-bottom: 20px; background-color: white;">ELIMINAR PRODUCTO</button>
 </div>
 

@@ -1,22 +1,25 @@
 
 <div class="example-container">
-	
-  <div>
-  	<label>TOTAL VENTA:&nbsp;</label>
-  	<mat-form-field>
-    <input matInput type="number" class="example-right-align" placeholder="10" />
-    <span matTextPrefix>$&nbsp;</span>
-    <span matTextSuffix>.00</span>
-  </mat-form-field>
+	<div class="block1">
+    <div style="margin-right: 20px;">
+      <label style="margin-right: 10px;">TOTAL VENTA:&nbsp;</label>
+      <mat-form-field appearance="outline">
+        <input matInput type="number" class="example-right-align" placeholder="55.00" />
+        <span matTextPrefix>S/.&nbsp;</span>
+      </mat-form-field>
+    </div>
+    <div>
+      <label style="margin-right: 10px;">TOTAL VENTA (DCST.):&nbsp;</label>
+      <mat-form-field appearance="outline">
+        <input matInput type="number" class="example-right-align" placeholder="46.75" />
+        <span matTextPrefix>S/.&nbsp;</span>
+      </mat-form-field>
+    </div>
   </div>
-  <div>
-  	<label>TOTAL VENTA (DCST.):&nbsp;</label>
-  	<mat-form-field>
-    <input matInput type="number" class="example-right-align" placeholder="0" />
-    <span matTextPrefix>$&nbsp;</span>
-    <span matTextSuffix>.00</span>
-  </mat-form-field>
-  </div>
-  <button mat-flat-button (click)="openDialog()">REGISTRAR</button>
+
+  <div class="example-button-row" style="display: flex; justify-content: space-evenly;">
+		<button mat-raised-button style="background-color: #71A64B; color: #031C26; font-weight: bolder;" routerLink="/iniciar-venta">ATRÁS</button>
+		<button mat-flat-button style="background-color: #71A64B; color: #031C26; font-weight: bolder;" (click)="openDialog()">FINALIZAR</button>
+	</div>
 
 </div>

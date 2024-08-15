@@ -5,6 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Instalaciones
 
 ng add @angular/material
+npm i bootstrap@5.3.3
+npm i bootstrap-icons
 
 ## Crear componentes
 

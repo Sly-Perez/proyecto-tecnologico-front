@@ -1,1 +1,27 @@
-<p>registrar works!</p>
+<div class="container" style="display: flex; flex-direction: column; align-items: center;">
+    <h4 class="titular">REGISTRO DE CLIENTE</h4>
+  
+    <div style="display: flex; flex-direction: column;">
+      <mat-form-field style="min-width: 400px;"  appearance="outline">
+        <mat-label>Código PUCP del cliente</mat-label>
+        <input matInput type="text" [(ngModel)]="value1" placeholder="Ingresar código PUCP" maxlength="8">
+        <button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field style="min-width: 400px;"  appearance="outline">
+        <mat-label>Celular del cliente</mat-label>
+        <input matInput type="text" [(ngModel)]="value2" placeholder="Ingresar celular" maxlength="8">
+        <button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    
+    <div class="d-flex ml-2" style="margin-bottom: 20px;">
+        <button mat-raised-button class="mr-2" style="background-color: #031C26; color: #71A64B; font-weight: bolder;" routerLink="/inicio">ATRÁS</button>
+        <button mat-raised-button style="background-color: #71A64B; color: #031C26; font-weight: bolder;" >GRABAR</button>
+    </div>
+    
+  </div>

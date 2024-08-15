@@ -12,5 +12,5 @@ import {MatButtonModule} from '@angular/material/button';
 })
 export class BuscarComponent {
   TipoDescuento: string | undefined;
-  descuento: string[] = ['No Aplica', 'Inicio de Ciclo', 'Navidad'];
+  descuento: string[] = ['No Aplica', '15% descuento', '30% descuento'];
 }

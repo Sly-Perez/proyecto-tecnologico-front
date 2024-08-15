@@ -1,25 +1,29 @@
-<div class="container">
-	<h6>REGISTRO DE VENTA</h6>
+<div>
+	<h6 class="titular">REGISTRO DE VENTA</h6>
 	<app-datos-venta></app-datos-venta>
 	
-	<mat-stepper [linear]="isLinear" #stepper>
-	  <mat-step [stepControl]="firstFormGroup" label="Escoger Curso">
-	    <app-curso></app-curso>
-	    <div>
-        <button mat-raised-button matStepperNext>SIGUIENTE</button>
-      </div>
-	  </mat-step>
-	  <mat-step [stepControl]="secondFormGroup" label="Escoger Paquete">
-	    <app-paquetes></app-paquetes>
-	    <div class="botones">
-	        <button mat-raised-button matStepperPrevious>VOLVER A CURSO</button>
-	        <button mat-flat-button matStepperPrevious>AGREGAR</button>
-      </div>
-	  </mat-step>
-	</mat-stepper>
-	
-	<app-productos-seleccionados></app-productos-seleccionados>
-	<div class="example-button-row">
-	    <a mat-flat-button routerLink="/detalle-venta">FINALIZAR</a>
+	<div class="block1">
+		<mat-stepper [linear]="isLinear" #stepper style="background-color: transparent; min-width: 500px; margin-right: 30px;">
+		<mat-step [stepControl]="firstFormGroup" label="Escoger Curso">
+			<app-curso></app-curso>
+			<div>
+				<button mat-raised-button matStepperNext>SIGUIENTE</button>
+			</div>
+		</mat-step>
+		<mat-step [stepControl]="secondFormGroup" label="Escoger Paquete">
+			<app-paquetes></app-paquetes>
+			<div class="botones">
+				<button mat-raised-button matStepperPrevious>VOLVER A CURSO</button>
+				<button mat-flat-button matStepperPrevious>AGREGAR</button>
+			</div>
+		</mat-step>
+		</mat-stepper>
+		
+		<app-productos-seleccionados></app-productos-seleccionados>
+	</div>
+
+	<div class="example-button-row" style="display: flex; justify-content: space-evenly;">
+		<button mat-raised-button style="background-color: #71A64B; color: #031C26; font-weight: bolder;" routerLink="/buscar">ATRÁS</button>
+		<button mat-raised-button style="background-color: #71A64B; color: #031C26; font-weight: bolder;" routerLink="/detalle-venta">SIGUIENTE</button>
 	</div>
 </div>

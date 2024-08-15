@@ -1,6 +1,6 @@
 <div class="container-curso">
-	<h6>Seleccione un curso</h6>
-	<mat-form-field class="example-full-width">
+	<h6 class="titular">Seleccione un curso</h6>
+	<mat-form-field class="example-full-width" appearance="outline">
 	    <mat-label>Buscar curso</mat-label>
 	    <input matInput type="text" [(ngModel)]="value" placeholder="Ingresar el nombre del curso">
 	    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">

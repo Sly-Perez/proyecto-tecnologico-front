@@ -13,10 +13,10 @@ export interface Elementos {
 }
 
 const ELEMENTOS_DATA: Elementos[] = [
-  {position: 1, producto: 'IND284: Lab1', precioBase: 10, precioDsct: 9},
-  {position: 2, producto: 'ECO204:	Ex1', precioBase: 20, precioDsct: 18},
-  {position: 3, producto: 'IEE272:	Lab5', precioBase: 10, precioDsct: 9},
-  {position: 4, producto: 'IEE272:	Lab7', precioBase: 15, precioDsct: 14.5}
+  {position: 1, producto: 'IND284: Lab1', precioBase: 10, precioDsct: 8.5},
+  {position: 2, producto: 'ECO204:	Ex1', precioBase: 20, precioDsct: 17},
+  {position: 3, producto: 'IEE272:	Lab5', precioBase: 10, precioDsct: 8.5},
+  {position: 4, producto: 'IEE272:	Lab7', precioBase: 15, precioDsct: 12.75}
 ];
 
 @Component({

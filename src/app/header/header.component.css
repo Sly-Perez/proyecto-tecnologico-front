@@ -1,3 +1,18 @@
 .example-spacer {
     flex: 1 1 auto;
 }
+
+.header {
+    background-color: #031C26;
+}
+
+.btn-logo {
+    width: 200px;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.mi-logo-svg {
+    width: 100%;
+}

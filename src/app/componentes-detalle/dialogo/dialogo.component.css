@@ -1,5 +1,5 @@
 .mat-dialog-container {
-  background-color: #424242; /* Cambia el color de fondo */
+  background-color: #D9D9D9; /* Cambia el color de fondo */
   color: #ffffff; /* Cambia el color del texto */
   padding: 20px; /* Ajusta el padding */
   font-size: 16px; /* Ajusta el tamaño de la fuente */
@@ -15,3 +15,8 @@
 .container-dialogo{
 	padding: 20px;
 }
+
+.titular {
+	font-weight: bold;
+	color: #71A64B;
+  }

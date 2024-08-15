@@ -1,0 +1,26 @@
+.titular {
+    font-weight: bolder;
+    color: #71A64B;
+  }
+  
+  .block1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .custom-input {
+    flex-grow: 1;
+    max-width: 400px;
+    background: none;
+    margin-right: 20px;
+  }
+  
+  .d-flex > button {
+    margin-right: 0.5rem;
+  }
+  
+  .btn-buscar{
+    background-color: #031C26;
+    color: #71A64B;
+    font-weight: bolder;
+  }
