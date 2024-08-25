@@ -6,12 +6,14 @@ import { Router } from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  selector: 'app-formulario',
+  templateUrl: './formulario.component.html',
+  styleUrl: './formulario.component.css'
 })
-export class HeaderComponent {
-  constructor(private router: Router){
+export class FormularioComponent {
+	value1 = '';
+    value2 = ''; 
+	constructor(private router: Router){
 
   }
 

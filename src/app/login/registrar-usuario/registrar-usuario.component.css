@@ -1,0 +1,144 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.formulario {
+  flex: 1;
+  background-color: #031C26;
+  padding: 0; /* Eliminamos el padding para que no cause márgenes */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagenes {
+  flex: 1;
+  background-color: #507c3f; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.titular{
+	font-weight: bolder;
+    color:#507c3f;
+}
+
+.body-form{
+	display: flex;
+	flex-direction: column;
+	max-width: 90%;
+}
+mat-label{
+	margin-bottom: 10px;
+}
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+}
+
+.example-radio-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-label {
+    color: white;
+    font-weight: bolder;
+    font-size: 17px;
+    margin-left: 3px; /* Ajusta la distancia entre el círculo y el texto */
+}
+
+.example-radio-button .mat-radio-outer-circle {
+    border-width: 50px; /* Ancho del borde del círculo */
+    border-color: white; /* Color del borde */
+}
+
+.logo-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.btn-logo {
+  width: 300px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.mi-logo {
+  width: 100%;
+}
+
+.imagen-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+}
+
+.registro-img {
+  width: 100%;
+  max-width: 350px; /* Ajustar según sea necesario */
+}
+
+/*************************************************************/
+@media (max-width: 790px){
+	.container {
+    flex-direction: column;
+    background-color: #031C26; /* Azul oscuro */
+  }
+
+  .formulario {
+    flex: 1;
+    width: 100%;
+    background-color: #031C26; /* Azul oscuro */
+  }
+
+  .imagenes {
+    display: none;
+  }
+
+  .logo-container {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .mi-logo {
+    width: 150px;
+  }
+}

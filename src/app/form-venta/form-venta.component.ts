@@ -13,4 +13,5 @@ import {MatDividerModule} from '@angular/material/divider';
 })
 export class FormVentaComponent {
 	value = ''; 
+	noEncontrado=false;
 }

@@ -9,11 +9,12 @@
         <mat-icon>close</mat-icon>
       </button>
     </mat-form-field>
-  
+  	
     <div class="d-flex ml-2" style="margin-bottom: 20px;">
       <button mat-raised-button class="mr-2" style="background-color: #031C26; color: #71A64B; font-weight: bolder;" routerLink="/buscar">BUSCAR</button>
       <button mat-raised-button style="background-color: #71A64B; color: #031C26; font-weight: bolder;" routerLink="/registrar">REGISTRAR</button>
     </div>
   </div>
+  <p style="color:#9c2d34;" *ngIf="noEncontrado">*Cliente no encontrado</p>
 </div>
 

@@ -1,0 +1,21 @@
+
+
+.mat-dialog-container {
+  background-color: #D9D9D9; /* Cambia el color de fondo */
+  color: #ffffff; /* Cambia el color del texto */
+  padding: 10px; /* Ajusta el padding */
+  font-size: 16px; /* Ajusta el tamaño de la fuente */
+}
+
+.mat-dialog-title {
+  font-size: 24px; /* Ajusta el tamaño de la fuente del título */
+}
+
+.mat-dialog-actions {
+  justify-content: flex-end; /* Alinea los botones al final */
+}
+.titular, label {
+	font-weight: bold;
+	color: #71A64B;
+  }
+  

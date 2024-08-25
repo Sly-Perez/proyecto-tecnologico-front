@@ -1,4 +1,20 @@
+<div class="header">
+    <div class="icon">
+        <button class="btn-logo" (click)="clickLogo()">
+            <img src="../../assets/me_logo.svg" alt="ME Logo" class="mi-logo-svg">
+        </button>
+    </div>
 
-<button class="btn-logo" (click)="clickLogo()">
-  <img src="../../assets/me_logo.svg" alt="ME Logo" class="mi-logo-svg">
-</button>
+    <div class="slider">
+        <button mat-icon-button [matMenuTriggerFor]="beforeMenu" class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+            <button mat-menu-item><mat-icon>folder</mat-icon>Historial de venta</button>
+            <button mat-menu-item routerLink="/inicio"><mat-icon>attach_money</mat-icon>Transacción</button>
+            <button mat-menu-item><mat-icon>work</mat-icon>Gestión de recursos</button>
+            <button mat-menu-item routerLink="/formulario"><mat-icon>close</mat-icon>Cerrar Sesión</button>
+        </mat-menu>
+    </div>
+</div>
+

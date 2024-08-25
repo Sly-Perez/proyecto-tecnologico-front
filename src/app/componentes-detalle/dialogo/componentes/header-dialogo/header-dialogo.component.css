@@ -1,0 +1,13 @@
+.header {
+    display:flex;
+    background-color: #031C26;
+    padding: 20px; /* Añade un padding alrededor del contenido */
+    justify-content: center;
+    align-items: center;
+    max-heigth:30vh;
+}
+.titular {
+	bottom:0;
+	font-weight: bold;
+	color: #71A64B;
+  }

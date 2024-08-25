@@ -32,6 +32,12 @@ import { DetalleVentaComponent } from './detalle-venta/detalle-venta.component';
 import { CalculoVentaComponent } from './componentes-detalle/calculo-venta/calculo-venta.component';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { DialogoComponent } from './componentes-detalle/dialogo/dialogo.component';
+import { FormularioComponent } from './login/formulario/formulario.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { RegistrarUsuarioComponent } from './login/registrar-usuario/registrar-usuario.component';
+import { HeaderDialogoComponent } from './componentes-detalle/dialogo/componentes/header-dialogo/header-dialogo.component';
+import { BodyDialogoComponent } from './componentes-detalle/dialogo/componentes/body-dialogo/body-dialogo.component';
+import { FooterDialogoComponent } from './componentes-detalle/dialogo/componentes/footer-dialogo/footer-dialogo.component';
 /*import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { MatDatepickerModule } from '@angular/material/datepicker';  // Importar MatDatepickerModule
 import { MatNativeDateModule } from '@angular/material/core'; 
@@ -51,7 +57,12 @@ import { MatNativeDateModule } from '@angular/material/core';
     ProductosSeleccionadosComponent,
     DetalleVentaComponent,
     CalculoVentaComponent,
-    DialogoComponent
+    DialogoComponent,
+    FormularioComponent,
+    RegistrarUsuarioComponent,
+    HeaderDialogoComponent,
+    BodyDialogoComponent,
+    FooterDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -70,6 +81,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 	MatTableModule,
 	MatCheckboxModule,
 	MatDialogModule,
+	MatMenuModule
 	/*MatDatepickerModule,  // Añadir MatDatepickerModule
     MatNativeDateModule*/
 	

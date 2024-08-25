@@ -1,9 +1,14 @@
-.example-spacer {
-    flex: 1 1 auto;
+.header {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
+    align-items: center; /* Centra los elementos verticalmente */
+    background-color: #031C26;
+    padding: 10px; /* Añade un padding alrededor del contenido */
 }
 
-.header {
-    background-color: #031C26;
+.icon {
+    display: flex;
+    align-items: center;
 }
 
 .btn-logo {
@@ -15,4 +20,13 @@
 
 .mi-logo-svg {
     width: 100%;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+	background-color: black;
 }

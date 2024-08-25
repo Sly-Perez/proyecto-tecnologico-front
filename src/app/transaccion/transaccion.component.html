@@ -7,14 +7,14 @@
 		<mat-step [stepControl]="firstFormGroup" label="Escoger Curso">
 			<app-curso></app-curso>
 			<div>
-				<button mat-raised-button matStepperNext>SIGUIENTE</button>
+				<button mat-raised-button matStepperNext style="background-color: #031C26; color: #71A64B; font-weight: bolder;">SIGUIENTE</button>
 			</div>
 		</mat-step>
 		<mat-step [stepControl]="secondFormGroup" label="Escoger Paquete">
 			<app-paquetes></app-paquetes>
 			<div class="botones">
-				<button mat-raised-button matStepperPrevious>VOLVER A CURSO</button>
-				<button mat-flat-button matStepperPrevious>AGREGAR</button>
+				<button mat-raised-button matStepperPrevious style="background-color: #031C26; color: #71A64B; font-weight: bolder;">VOLVER A CURSO</button>
+				<button mat-flat-button matStepperPrevious style="background-color: #031C26; color: #71A64B; font-weight: bolder;">AGREGAR</button>
 			</div>
 		</mat-step>
 		</mat-stepper>
