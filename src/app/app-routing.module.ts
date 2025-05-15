@@ -7,16 +7,18 @@ import { RegistrarUsuarioComponent } from './login/registrar-usuario/registrar-u
 import { TransaccionComponent } from './transaccion/transaccion.component';
 import { BuscarComponent } from './venta/buscar/buscar.component';
 import { RegistrarComponent } from './venta/registrar/registrar.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
-	{path:'', redirectTo:'/inicio', pathMatch:'full'},
+	{path:'', redirectTo:'/formulario', pathMatch:'full'},
 	{path:'inicio', component:FormVentaComponent},
 	{path: 'registrar', component:RegistrarComponent},
 	{path:'buscar', component:BuscarComponent},
 	{path:'iniciar-venta', component: TransaccionComponent},
-	{path:'detalle-venta', component:DetalleVentaComponent},
 	{path:'formulario', component:FormularioComponent},
-	{path:'registrar-usuario', component:RegistrarUsuarioComponent}
+	{path:'detalle-venta', component:DetalleVentaComponent},
+	{path:'registrar-usuario', component:RegistrarUsuarioComponent},
+	{path:'perfil', component:PerfilComponent}
 ];
 
 @NgModule({

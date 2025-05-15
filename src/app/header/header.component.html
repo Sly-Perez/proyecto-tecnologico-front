@@ -10,10 +10,11 @@
             <mat-icon>menu</mat-icon>
         </button>
         <mat-menu #beforeMenu="matMenu" xPosition="before">
+            <button mat-menu-item routerLink="/perfil"><mat-icon>person</mat-icon>Perfil</button>
             <button mat-menu-item><mat-icon>folder</mat-icon>Historial de venta</button>
             <button mat-menu-item routerLink="/inicio"><mat-icon>attach_money</mat-icon>Transacción</button>
             <button mat-menu-item><mat-icon>work</mat-icon>Gestión de recursos</button>
-            <button mat-menu-item routerLink="/formulario"><mat-icon>close</mat-icon>Cerrar Sesión</button>
+            <button mat-menu-item (click)="cerrarSesion()"><mat-icon>close</mat-icon>Cerrar Sesión</button>
         </mat-menu>
     </div>
 </div>

@@ -18,4 +18,14 @@ export class HeaderComponent {
   clickLogo(){
     this.router.navigate(['/inicio']);
   }
+
+  cerrarSesion(){
+    if(!localStorage.getItem("jwt")){
+      this.router.navigate(['/formulario']);
+    }
+    else{
+      localStorage.removeItem("jwt");
+      this.router.navigate(['/formulario']);
+    }
+  }
 }

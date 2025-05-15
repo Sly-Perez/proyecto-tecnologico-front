@@ -38,6 +38,9 @@ import { RegistrarUsuarioComponent } from './login/registrar-usuario/registrar-u
 import { HeaderDialogoComponent } from './componentes-detalle/dialogo/componentes/header-dialogo/header-dialogo.component';
 import { BodyDialogoComponent } from './componentes-detalle/dialogo/componentes/body-dialogo/body-dialogo.component';
 import { FooterDialogoComponent } from './componentes-detalle/dialogo/componentes/footer-dialogo/footer-dialogo.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PerfilComponent } from './perfil/perfil.component';
+
 /*import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { MatDatepickerModule } from '@angular/material/datepicker';  // Importar MatDatepickerModule
 import { MatNativeDateModule } from '@angular/material/core'; 
@@ -62,7 +65,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     RegistrarUsuarioComponent,
     HeaderDialogoComponent,
     BodyDialogoComponent,
-    FooterDialogoComponent
+    FooterDialogoComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
@@ -81,7 +85,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 	MatTableModule,
 	MatCheckboxModule,
 	MatDialogModule,
-	MatMenuModule
+	MatMenuModule,
+  HttpClientModule
 	/*MatDatepickerModule,  // Añadir MatDatepickerModule
     MatNativeDateModule*/
 	

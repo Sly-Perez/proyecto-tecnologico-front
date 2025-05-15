@@ -1,61 +1,116 @@
 <div class="container">
   <div class="formulario">
-    <!-- Contenido del formulario -->
-    <div class="body-form">
-    	<div style="align-items: center;">
-    		<h1 class="titular" style="justiy-content: center; margin-bottom:0px;">REGISTRARTE</h1>
-    		
-    	</div>
-	    <div style="display: flex; flex-direction: column;">
-	   	  <mat-label class="titular">Código PUCP</mat-label>
-	      <mat-form-field style="width: 95%;">
-	        <input matInput type="text" [(ngModel)]="value1" placeholder="Ingresar código PUCP" maxlength="8">
-	        <button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
-	          <mat-icon>close</mat-icon>
-	        </button>
-	      </mat-form-field>
-	
-          <mat-label class="titular">Contraseña</mat-label>	
-	      <mat-form-field style="width: 95%;">
-	        <input matInput type="password" [(ngModel)]="value2" placeholder="Ingresar contraseña">
-	        <button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
-	          <mat-icon>close</mat-icon>
-	        </button>
-	      </mat-form-field>
-	    </div>
-	    
-	   <div>
-		    <h6 class="titular">TIPO DE CARGO</h6>
-		    <mat-radio-group
-		        aria-labelledby="example-radio-group-label"
-		        class="example-radio-group"
-		        [(ngModel)]="TipoCargo">
-		        @for (cargo of cargo; track cargo) {
-		            <mat-radio-button class="example-radio-button" [value]="cargo">
-		                <span class="radio-label">{{cargo}}</span>
-		            </mat-radio-button>
-		        }
-		    </mat-radio-group>
-		</div>
-		
-		<div style="margin-bottom: 20px; display: flex; flex-direction: column;">
-		    <button mat-raised-button style="background-color: #71A64B; color: #031C26; font-weight: bolder; width: 100%" routerLink="/inicio">GRABAR</button>
-		</div>
-	   
+  <div class="body-form">
+    <div style="align-items: center;">
+      <h1 class="titular" style="justify-content: center; margin-bottom:0px;">REGISTRARTE</h1>
     </div>
-    
+    <div style="display: flex; flex-direction: column;">
+      
+      <mat-label class="titular">Nombre Completo</mat-label>
+      <mat-form-field style="width: 95%;">
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="nombreCompleto"
+          placeholder="Ingresar nombre completo"
+          maxlength="100"
+        />
+        <button *ngIf="nombreCompleto" matSuffix mat-icon-button aria-label="Clear" (click)="nombreCompleto=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-label class="titular">Apellido</mat-label>
+      <mat-form-field style="width: 95%;">
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="apellido"
+          placeholder="Ingresar apellido"
+          maxlength="100"
+        />
+        <button *ngIf="apellido" matSuffix mat-icon-button aria-label="Clear" (click)="apellido=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-label class="titular">DNI</mat-label>
+      <mat-form-field style="width: 95%;">
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="dni"
+          placeholder="Ingresar DNI"
+          maxlength="8"
+          minlength="8"
+          pattern="[0-9]{8}"
+        />
+        <button *ngIf="dni" matSuffix mat-icon-button aria-label="Clear" (click)="dni=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-label class="titular">Correo</mat-label>
+      <mat-form-field style="width: 95%;">
+        <input
+          matInput
+          type="email"
+          [(ngModel)]="correo"
+          placeholder="Ingresar correo"
+          maxlength="200"
+        />
+        <button *ngIf="correo" matSuffix mat-icon-button aria-label="Clear" (click)="correo=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-label class="titular">Contraseña</mat-label>
+      <mat-form-field style="width: 95%;">
+        <input
+          matInput
+          type="password"
+          [(ngModel)]="contrasenha"
+          placeholder="Ingresar contraseña"
+          minlength="6"
+          maxlength="20"
+        />
+        <button *ngIf="contrasenha" matSuffix mat-icon-button aria-label="Clear" (click)="contrasenha=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-label class="titular">Teléfono</mat-label>
+      <mat-form-field style="width: 95%;">
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="telefono"
+          placeholder="Ingresar teléfono"
+          maxlength="9"
+          minlength="9"
+          pattern="[0-9]{9}"
+        />
+        <button *ngIf="telefono" matSuffix mat-icon-button aria-label="Clear" (click)="telefono=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+    </div>
+
+    <div style="margin-bottom: 20px; display: flex; flex-direction: column;">
+      <button
+        mat-raised-button
+        style="background-color: #71A64B; color: #031C26; font-weight: bolder; width: 100%"
+		(click)="grabar()"
+      >
+        GRABAR
+      </button>
+	  <p style="margin-top: 1rem; color: #E0E2EC; text-align: center; font-size: 0.90rem;">
+		Ya tienes una cuenta? <a style="cursor: pointer; color: #71A64B;" routerLink="/formulario">Inicia sesión</a>
+	  </p>
+    </div>
   </div>
-  <div class="imagenes">
-	    <div class="logo-container">
-	        <div class="icon">
-	            <button class="btn-logo" (click)="clickLogo()">
-	                <img [src]="logoSrc" alt="ME Logo" class="mi-logo">
-	            </button>
-	        </div>
-	    </div>
-	    <div class="imagen-container">
-	    	<img src="../../assets/registro.png" alt="Foto registro" class="registro-img">
-	    </div>
-	</div>
+</div>
+
   
 </div>

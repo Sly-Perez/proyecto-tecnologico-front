@@ -3,19 +3,19 @@
     <!-- Contenido del formulario -->
     <div class="body-form">
     	<div style="align-items: center;">
-    		<h1 class="titular" style="justiy-content: center; margin-bottom:0px;">BIENVENIDO</h1>
+    		<h1 class="titular" style="justify-content: center; margin-bottom:0px;">BIENVENIDO</h1>
     		<p>Sistema exclusivo para el Equipo comercial</p>
     	</div>
 	    <div style="display: flex; flex-direction: column;">
-	   	  <mat-label class="titular">Código PUCP</mat-label>
+	   	  <mat-label class="titular">Correo</mat-label>
 	      <mat-form-field style="width: 95%;">
-	        <input matInput type="text" [(ngModel)]="value1" placeholder="Ingresar código PUCP" maxlength="8">
+	        <input matInput type="text" [(ngModel)]="value1" placeholder="Ingresar correo" maxlength="200">
 	        <button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
 	          <mat-icon>close</mat-icon>
 	        </button>
 	      </mat-form-field>
 	
-          <mat-label class="titular">Crontraseña</mat-label>	
+          <mat-label class="titular">Contraseña</mat-label>	
 	      <mat-form-field style="width: 95%;">
 	        <input matInput type="password" [(ngModel)]="value2" placeholder="Ingresar contraseña" maxlength="8">
 	        <button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
@@ -25,7 +25,7 @@
 	    </div>
 	    
 	    <div  style="margin-bottom: 20px; display:flex; flex-direction:column;">
-	        <button mat-raised-button style="background-color: #031C26; color: #71A64B; font-weight: bolder; width:100%; margin-bottom: 10px;" routerLink="/inicio">INGRESAR</button>
+	        <button mat-raised-button style="background-color: #031C26; color: #71A64B; font-weight: bolder; width:100%; margin-bottom: 10px;" (click)="login()">INGRESAR</button>
 	        <button mat-raised-button style="background-color: #71A64B; color: #031C26; font-weight: bolder; width:100%" routerLink="/registrar-usuario">REGISTRARSE</button>
 	    </div>
     </div>

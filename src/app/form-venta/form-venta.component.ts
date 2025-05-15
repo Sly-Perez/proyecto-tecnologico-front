@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {FormsModule} from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatDividerModule} from '@angular/material/divider';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-venta',
@@ -14,4 +10,30 @@ import {MatDividerModule} from '@angular/material/divider';
 export class FormVentaComponent {
 	value = ''; 
 	noEncontrado=false;
+  usuario: any = null;
+  
+  constructor(private router: Router, private http: HttpClient){}
+
+  ngOnInit(): void {
+    this.fetchUserData();
+  }
+
+  fetchUserData(): void {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem("jwt")}` || ""
+    });
+
+    this.http.get('http://localhost:3001/api/estudiante/mi/perfil', { headers })
+      .subscribe({
+        next: (response) => {
+          this.usuario = response;
+        },
+        error: (error) => {
+          console.error('Error en la petición:', error);
+          this.router.navigate(['/formulario']);
+        }
+      });
+  }
+
 }
