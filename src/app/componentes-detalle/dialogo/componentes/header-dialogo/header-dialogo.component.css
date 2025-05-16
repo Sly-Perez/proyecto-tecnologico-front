@@ -4,7 +4,7 @@
     padding: 20px; /* Añade un padding alrededor del contenido */
     justify-content: center;
     align-items: center;
-    max-heigth:30vh;
+    max-height:30vh;
 }
 .titular {
 	bottom:0;
