@@ -11,7 +11,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
 	{path:'', redirectTo:'/formulario', pathMatch:'full'},
-	{path:'inicio', component:FormVentaComponent},
+	{path:'inicio', component:BuscarComponent},
 	{path: 'registrar', component:RegistrarComponent},
 	{path:'buscar', component:BuscarComponent},
 	{path:'iniciar-venta', component: TransaccionComponent},
