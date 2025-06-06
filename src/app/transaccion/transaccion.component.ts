@@ -1,9 +1,6 @@
-import { Component } from '@angular/core';
-import {FormBuilder, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatStepperModule} from '@angular/material/stepper';
-import {MatButtonModule} from '@angular/material/button';
+import { Component, ViewChild } from '@angular/core';
+import { FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatStepper } from '@angular/material/stepper';
 
 @Component({
   selector: 'app-transaccion',
@@ -11,13 +8,30 @@ import {MatButtonModule} from '@angular/material/button';
   styleUrl: './transaccion.component.css'
 })
 export class TransaccionComponent {
-	firstFormGroup = this._formBuilder.group({
-	    firstCtrl: ['', Validators.required],
-	});
-	secondFormGroup = this._formBuilder.group({
-	    secondCtrl: ['', Validators.required],
-	});
-	isLinear = false;
-	
-	constructor(private _formBuilder: FormBuilder) {}
+
+  @ViewChild('stepper') stepper!: MatStepper;  // ⬅️ Referencia al mat-stepper
+
+  idCursoSeleccionado: number | null = null;
+
+  guardarIdCurso(id: number): void {
+    this.idCursoSeleccionado = id;
+    console.log('ID recibido en el padre:', id);
+
+    // ⬅️ Avanzar automáticamente al siguiente paso
+    if (this.stepper) {
+      this.stepper.next();
+    }
+  }
+
+  firstFormGroup = this._formBuilder.group({
+    firstCtrl: ['', Validators.required],
+  });
+
+  secondFormGroup = this._formBuilder.group({
+    secondCtrl: ['', Validators.required],
+  });
+
+  isLinear = false;
+
+  constructor(private _formBuilder: FormBuilder) {}
 }

@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-curso',
@@ -12,51 +10,42 @@ export class CursoComponent implements OnInit {
   value = '';
   favoriteCurso: any;
   cursos: any[] = [];
-  idcurso:any;
+  idcurso: any;
 
-  constructor(private http: HttpClient, private router: Router) {}
+  @Output() cursoSeleccionado = new EventEmitter<number>(); // ⬅️ Emite el ID al padre
+
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.buscarCursos(''); // Buscar todos al inicio (o puedes cambiarlo)
+    this.buscarCursos('');
   }
 
   buscarCursos(nombre: string): void {
     const token = localStorage.getItem('jwt');
-
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`,
       'Content-Type': 'application/json'
     });
 
-    // "_" es reemplazado por espacio según tu backend
     const nombreParam = nombre.trim().replace(/ /g, '_');
 
     this.http.get<any[]>(`http://localhost:3001/api/curso/nombre/a`, { headers })
       .subscribe({
         next: (data) => {
           this.cursos = data;
-		  //this.idcurso = data.id_curso;
-		  console.log(data)
+          console.log('Cursos recibidos:', data);
         },
         error: (err) => {
           console.error('Error al obtener cursos:', err);
         }
       });
   }
-  onCursoSeleccionado(): void {
-		if (this.favoriteCurso) {
-			this.idcurso = this.favoriteCurso.id_curso;
-			console.log('Curso seleccionado:', this.favoriteCurso.nombre, 'ID:', this.idcurso);
-		}
-	}
 
-	irASiguiente(): void {
-		if (this.idcurso) {
-			this.router.navigate(['/paquetes'], {
-			queryParams: { idcurso: this.idcurso }
-			});
-		} else {
-			alert('Selecciona un curso antes de continuar');
-		}
-	}
+  onCursoSeleccionado(): void {
+    if (this.favoriteCurso) {
+      this.idcurso = this.favoriteCurso.id_curso;
+      console.log('Curso seleccionado:', this.favoriteCurso.nombre, 'ID:', this.idcurso);
+      this.cursoSeleccionado.emit(this.idcurso); // ⬅️ Emisión hacia el padre
+    }
+  }
 }
