@@ -11,41 +11,11 @@
         <input
           matInput
           type="text"
-          [(ngModel)]="nombreCompleto"
+          [(ngModel)]="nombre"
           placeholder="Ingresar nombre completo"
           maxlength="100"
         />
-        <button *ngIf="nombreCompleto" matSuffix mat-icon-button aria-label="Clear" (click)="nombreCompleto=''">
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-form-field>
-
-      <mat-label class="titular">Apellido</mat-label>
-      <mat-form-field style="width: 95%;">
-        <input
-          matInput
-          type="text"
-          [(ngModel)]="apellido"
-          placeholder="Ingresar apellido"
-          maxlength="100"
-        />
-        <button *ngIf="apellido" matSuffix mat-icon-button aria-label="Clear" (click)="apellido=''">
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-form-field>
-
-      <mat-label class="titular">DNI</mat-label>
-      <mat-form-field style="width: 95%;">
-        <input
-          matInput
-          type="text"
-          [(ngModel)]="dni"
-          placeholder="Ingresar DNI"
-          maxlength="8"
-          minlength="8"
-          pattern="[0-9]{8}"
-        />
-        <button *ngIf="dni" matSuffix mat-icon-button aria-label="Clear" (click)="dni=''">
+        <button *ngIf="nombre" matSuffix mat-icon-button aria-label="Clear" (click)="nombre=''">
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
@@ -69,12 +39,12 @@
         <input
           matInput
           type="password"
-          [(ngModel)]="contrasenha"
+          [(ngModel)]="contrasena"
           placeholder="Ingresar contraseña"
           minlength="6"
           maxlength="20"
         />
-        <button *ngIf="contrasenha" matSuffix mat-icon-button aria-label="Clear" (click)="contrasenha=''">
+        <button *ngIf="contrasena" matSuffix mat-icon-button aria-label="Clear" (click)="contrasena=''">
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>

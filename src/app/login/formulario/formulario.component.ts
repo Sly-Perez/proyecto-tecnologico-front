@@ -28,14 +28,14 @@ export class FormularioComponent {
 
     const body = {
       correo: this.value1,
-      contrasenha: this.value2
+      contrasena: this.value2
     };
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
 
-    this.http.post<{ token: string }>('http://localhost:3001/api/estudiante/login', body, { headers })
+    this.http.post<{ token: string }>('http://localhost:3001/api/usuario/login', body, { headers })
       .subscribe({
         next: (response) => {
           console.log('LOGEADO');

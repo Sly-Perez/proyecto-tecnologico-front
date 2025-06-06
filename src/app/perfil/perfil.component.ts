@@ -26,7 +26,7 @@ export class PerfilComponent {
       'Authorization': `Bearer ${localStorage.getItem("jwt")}` || ""
     });
     
-    this.http.get('http://localhost:3001/api/estudiante/mi/perfil', { headers })
+    this.http.get('http://localhost:3001/api/usuario/mi/perfil', { headers })
     .subscribe({
       next: (response) => {
         this.usuario = response;
