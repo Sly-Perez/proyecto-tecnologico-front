@@ -1,25 +1,9 @@
 <div class="container">
 
-  <h4 class="titular" style="text-align: center;">Bienvenido/a, {{ usuario?.nombreCompleto }}</h4>
+  <h4 class="titular" style="text-align: center;">Bienvenido/a, {{ usuario?.nombre }}</h4>
   
-  <!--
-  <h4 class="titular">REGISTRO DE VENTA</h4>
+  <app-transaccion></app-transaccion>
 
-  <div class="d-flex align-items-center justify-content-start flex-wrap block1">
-    <mat-form-field class="custom-input custom-outline" appearance="outline">
-      <mat-label>Código PUCP del cliente</mat-label>
-      <input matInput type="text" [(ngModel)]="value" placeholder="Ingresar código PUCP" maxlength="8">
-      <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
-  	
-    <div class="d-flex ml-2" style="margin-bottom: 20px;">
-      <button mat-raised-button class="mr-2" style="background-color: #031C26; color: #71A64B; font-weight: bolder;" routerLink="/buscar">BUSCAR</button>
-      <button mat-raised-button style="background-color: #71A64B; color: #031C26; font-weight: bolder;" routerLink="/registrar">REGISTRAR</button>
-    </div>
-  </div>
--->
   <p style="color:#9c2d34;" *ngIf="noEncontrado">*Cliente no encontrado</p>
 </div>
 

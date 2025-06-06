@@ -18,11 +18,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class RegistrarUsuarioComponent {
   
-  nombreCompleto: string = '';
-  apellido: string = '';
-  dni: string = '';
+  nombre: string = '';
   correo: string = '';
-  contrasenha: string = '';
+  contrasena: string = '';
   telefono: string = '';
 
   //intento de que el logo cambie de color
@@ -53,11 +51,9 @@ export class RegistrarUsuarioComponent {
   grabar() {
 
     const body = {
-      nombreCompleto: this.nombreCompleto,
-      apellido: this.apellido,
-      dni: this.dni,
+      nombre: this.nombre,
       correo: this.correo,
-      contrasenha: this.contrasenha,
+      contrasena: this.contrasena,
       telefono: this.telefono
     };
 
@@ -67,7 +63,7 @@ export class RegistrarUsuarioComponent {
       'Content-Type': 'application/json'
     });
 
-    this.http.post('http://localhost:3001/api/estudiante/', body, { headers })
+    this.http.post('http://localhost:3001/api/usuario/', body, { headers })
       .subscribe({
         next: (response) => {
           this.router.navigate(['/formulario']);

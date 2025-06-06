@@ -40,6 +40,7 @@ import { BodyDialogoComponent } from './componentes-detalle/dialogo/componentes/
 import { FooterDialogoComponent } from './componentes-detalle/dialogo/componentes/footer-dialogo/footer-dialogo.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PerfilComponent } from './perfil/perfil.component';
+import { MatSelectModule } from '@angular/material/select';
 
 /*import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { MatDatepickerModule } from '@angular/material/datepicker';  // Importar MatDatepickerModule
@@ -75,6 +76,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatButtonModule,
     MatToolbarModule,
 	FormsModule,
+  MatSelectModule,
 	MatInputModule, 
     MatFormFieldModule,
 	MatDividerModule,

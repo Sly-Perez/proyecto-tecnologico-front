@@ -2,17 +2,25 @@
 	<h6 class="titular">Seleccione un curso</h6>
 	<mat-form-field class="example-full-width" appearance="outline">
 	    <mat-label>Buscar curso</mat-label>
-	    <input matInput type="text" [(ngModel)]="value" placeholder="Ingresar el nombre del curso">
-	    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+	    <input matInput type="text" [(ngModel)]="nombre" placeholder="Ingresar el nombre del curso" (keyup)="fetchCursos(nombre)">
+	    <button *ngIf="nombre" matSuffix mat-icon-button aria-label="Clear" (click)="nombre=''">
 	      <mat-icon>close</mat-icon>
 	    </button>
 	</mat-form-field>
 	<mat-radio-group
 	  aria-labelledby="example-radio-group-label"
 	  class="example-radio-group"
-	  [(ngModel)]="favoriteCurso">
-	  @for (curso of curso; track curso) {
-	    <mat-radio-button class="example-radio-button" [value]="curso">{{curso}}</mat-radio-button>
-	  }
+	  [(ngModel)]="favoriteCurso"
+	 	(change)="cursoSeleccionado.emit(favoriteCurso)" 
+	>
+	  	<mat-radio-button
+			*ngFor="let curso of curso"
+			class="example-radio-button"
+			[value]="curso">
+			{{ curso?.nombre }}
+		</mat-radio-button>
 	</mat-radio-group>
+
+	
+
 </div>

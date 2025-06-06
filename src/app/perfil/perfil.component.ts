@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrl: './perfil.component.css'
 })
 export class PerfilComponent {
-  displayedColumns: string[] = ['idOrdenPago', 'fecha', 'precioOriginal', 'precioConDescuento', 'montoPagado'];
+  displayedColumns: string[] = ['idPaquete', 'curso', 'evaluacion', 'precioComprado', 'codigoCarpeta'];
   dataSource: any[] = [];
   usuario: any = null;
   compras: any[] = [];
@@ -26,10 +26,11 @@ export class PerfilComponent {
       'Authorization': `Bearer ${localStorage.getItem("jwt")}` || ""
     });
     
-    this.http.get('http://localhost:3001/api/estudiante/mi/perfil', { headers })
+    this.http.get('http://localhost:3001/api/usuario/mi/perfil', { headers })
     .subscribe({
       next: (response) => {
         this.usuario = response;
+        console.log(this.usuario)
         },
         error: (error) => {
           console.error('Error en la petición:', error);
@@ -46,16 +47,17 @@ export class PerfilComponent {
       'Authorization': `Bearer ${localStorage.getItem("jwt")}` || ""
     });
     
-    this.http.get<any[]>('http://localhost:3001/api/estudiante/mis/compras', { headers })
+    this.http.get<any[]>('http://localhost:3001/api/usuario/mis/compras', { headers })
     .subscribe({
       next: (response: any[]) => {
+
         this.dataSource = response.flatMap((orden: any) => {
-          return orden.detallesOrdenesPagos.map((detalle: any) => ({
-            idOrdenPago: orden.idOrdenPago,
-            fecha: orden.fecha,
-            montoPagado: detalle.montoPagado,
-            precioOriginal: detalle.paquete.precio,
-            precioConDescuento: detalle.paquete.precioConDescuento,
+          return orden.map((detalle: any) => ({
+            idPaquete: orden.id_paquete,
+            curso: orden.nombre,
+            evaluacion: detalle.cod_carpeta,
+            precioComprado: detalle.precio_unitario,
+            codigoCarpeta: detalle.id_evaluacion,
           }));
         });
       },

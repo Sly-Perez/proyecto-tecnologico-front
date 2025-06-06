@@ -11,6 +11,13 @@ import {MatButtonModule} from '@angular/material/button';
   styleUrl: './transaccion.component.css'
 })
 export class TransaccionComponent {
+
+	selectedCurso: any;
+
+	handleSelectedCurso(curso: any) {
+		this.selectedCurso = curso;
+	}
+
 	firstFormGroup = this._formBuilder.group({
 	    firstCtrl: ['', Validators.required],
 	});

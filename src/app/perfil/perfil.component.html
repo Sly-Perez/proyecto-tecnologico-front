@@ -13,17 +13,7 @@
     <!-- DATOS DEL USUARIO -->
     <mat-list dense style="flex: 1;">
       <mat-list-item>
-        <span style="font-weight: bold; width: 120px;">Nombres:</span> {{ usuario?.nombreCompleto }}
-      </mat-list-item>
-      <mat-divider></mat-divider>
-
-      <mat-list-item>
-        <span style="font-weight: bold; width: 120px;">Apellidos:</span> {{ usuario?.apellido }}
-      </mat-list-item>
-      <mat-divider></mat-divider>
-
-      <mat-list-item>
-        <span style="font-weight: bold; width: 120px;">DNI:</span> {{ usuario?.dni }}
+        <span style="font-weight: bold; width: 120px;">Nombres:</span> {{ usuario?.nombre }}
       </mat-list-item>
       <mat-divider></mat-divider>
 
@@ -32,9 +22,10 @@
       </mat-list-item>
       <mat-divider></mat-divider>
 
-      <mat-list-item>
-        <span style="font-weight: bold; width: 120px;">Teléfono:</span> {{ usuario?.telefono }}
-      </mat-list-item>
+      <mat-list-item *ngIf="usuario?.telefono != null">
+  <span style="font-weight: bold; width: 120px;">Teléfono:</span> {{ usuario?.telefono }}
+</mat-list-item>
+
     </mat-list>
   </div>
 
@@ -44,40 +35,31 @@
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z2" style="background-color: rgba(255, 255, 255, 0.85); border-radius: 10px; overflow: hidden;">
 
     <!-- ID de orden -->
-    <ng-container matColumnDef="idOrdenPago">
+    <ng-container matColumnDef="idPaquete">
       <th mat-header-cell *matHeaderCellDef> N° Orden </th>
-      <td mat-cell *matCellDef="let element"> {{ element.idOrdenPago }} </td>
-    </ng-container>
-
-    <!-- Fecha -->
-    <ng-container matColumnDef="fecha">
-      <th mat-header-cell *matHeaderCellDef> Fecha </th>
-      <td mat-cell *matCellDef="let element"> {{ element.fecha | date:'mediumDate' }} </td>
+      <td mat-cell *matCellDef="let element"> {{ element.idPaquete }} </td>
     </ng-container>
 
     <!-- Precio original -->
-    <ng-container matColumnDef="precioOriginal">
-      <th mat-header-cell *matHeaderCellDef> Precio original </th>
-      <td mat-cell *matCellDef="let element"> S/. {{ element.precioOriginal }} </td>
+    <ng-container matColumnDef="precioComprado">
+      <th mat-header-cell *matHeaderCellDef> Precio Pagado </th>
+      <td mat-cell *matCellDef="let element"> S/. {{ element.precioComprado }} </td>
     </ng-container>
 
-    <!-- Precio con descuento -->
-    <ng-container matColumnDef="precioConDescuento">
-      <th mat-header-cell *matHeaderCellDef> Descuento </th>
-      <td mat-cell *matCellDef="let element">
-        <span *ngIf="element.precioConDescuento > 0; else noDescuento">
-          S/. {{ element.precioConDescuento }}
-        </span>
-        <ng-template #noDescuento>
-          <em>No aplica</em>
-        </ng-template>
-      </td>
+    <ng-container matColumnDef="curso">
+      <th mat-header-cell *matHeaderCellDef> Curso </th>
+      <td mat-cell *matCellDef="let element"> S/. {{ element.nombre }} </td>
     </ng-container>
 
     <!-- Monto pagado -->
-    <ng-container matColumnDef="montoPagado">
-      <th mat-header-cell *matHeaderCellDef> Pagado </th>
-      <td mat-cell *matCellDef="let element"> <strong>S/. {{ element.montoPagado }}</strong> </td>
+    <ng-container matColumnDef="evaluacion">
+      <th mat-header-cell *matHeaderCellDef> Evaluacion </th>
+      <td mat-cell *matCellDef="let element"> <strong>S/. {{ element.evaluacion }}</strong> </td>
+    </ng-container>
+
+    <ng-container matColumnDef="codigoCarpeta">
+      <th mat-header-cell *matHeaderCellDef> codigo carpeta </th>
+      <td mat-cell *matCellDef="let element"> <strong>S/. {{ element.codigoCarpeta }}</strong> </td>
     </ng-container>
 
     <!-- Filas -->
