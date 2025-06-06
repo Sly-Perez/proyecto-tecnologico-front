@@ -6,9 +6,6 @@
 		<mat-stepper [linear]="isLinear" #stepper style="background-color: transparent; min-width: 500px; margin-right: 30px;">
 		<mat-step [stepControl]="firstFormGroup" label="Escoger Curso">
 			<app-curso></app-curso>
-			<div>
-				<button mat-raised-button matStepperNext style="background-color: #031C26; color: #71A64B; font-weight: bolder;">SIGUIENTE</button>
-			</div>
 		</mat-step>
 		<mat-step [stepControl]="secondFormGroup" label="Escoger Paquete">
 			<app-paquetes></app-paquetes>

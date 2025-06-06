@@ -1,5 +1,5 @@
 <app-form-venta></app-form-venta>
-<p *ngIf="usuario">Usuario: 20202002</p>
+<p>Sigue los pasos para realizar tu compra</p>
 <div class="container">
 	<div class="block1">
 		<div style="margin-right: 40px;">
@@ -11,17 +11,6 @@
 			  <mat-divider></mat-divider>
 			  <mat-list-item>FUNDAMENTOS DE PROGRAMACIÓN</mat-list-item>
 			</mat-list>
-		</div>
-		<div>
-			<h6 class="titular">TIPO DE DESCUENTO</h6>
-			<mat-radio-group
-			  aria-labelledby="example-radio-group-label"
-			  class="example-radio-group"
-			  [(ngModel)]="TipoDescuento">
-			  @for (descuento of descuento; track descuento) {
-				<mat-radio-button class="example-radio-button" [value]="descuento">{{descuento}}</mat-radio-button>
-			  }
-			</mat-radio-group>
 		</div>
 	</div>
 
